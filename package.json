@@ -1,14 +1,16 @@
 {
   "name": "generator-skygear",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Scaffolding for Skygear JS App",
   "files": [
-    "app",
-    "router"
+    "generators"
   ],
+  "main": "generators/index.js",
   "keywords": [
+    "skygear",
     "yeoman-generator"
   ],
+  "repository": "SkygearIO/generator-skygear",
   "dependencies": {
     "yeoman-generator": "^0.23.4",
     "generator-react-webpack": "3.3.2"
