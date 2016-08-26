@@ -88,7 +88,7 @@ class AppComponent extends React.Component {
               <input
                 type="submit"
                 value="Signup"
-                onSubmit={(e) => {
+                onClick={(e) => {
                   e.preventDefault();
                   this.doSignup();
                 }}
