@@ -60,6 +60,11 @@ class SkygearGenerator extends Generators.Base {
         link: 'strong'
       }
     ).on('end', () => {
+        /* Some base files need to be overwritten, so we force yeoman
+         * to do so.
+         */
+      this.conflicter.force = true;
+
       this.fs.copy(
         this.templatePath('skygear.png'),
         this.destinationPath('src/images/skygear.png')
