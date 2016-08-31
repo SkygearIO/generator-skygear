@@ -10,6 +10,8 @@ following steps:
 
 ## Installation
 
+Make sure you are using node5.0+ and npm3+
+
 ```bash
 # Make sure both is installed globally
 npm install -g yo
