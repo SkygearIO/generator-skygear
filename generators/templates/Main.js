@@ -61,10 +61,6 @@ class AppComponent extends React.Component {
           <form
             method="POST"
             action="#"
-            onSubmit={(e) => {
-              e.preventDefault();
-              this.doLogin();
-            }}
           >
             <p>{this.state.user}</p>
             <p>
@@ -83,6 +79,10 @@ class AppComponent extends React.Component {
               <input
                 type="submit"
                 value="Login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  this.doLogin();
+                }}
               />
               <span> or </span>
               <input
