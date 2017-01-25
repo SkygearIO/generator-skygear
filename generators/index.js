@@ -31,10 +31,16 @@ class SkygearGenerator extends Generators.Base {
       name: 'apiKey',
       message: 'What is your skygear API key (You can find it in portal)',
       default: 'dc0903fa85924776baa77df813901efc'
+    }, {
+      type: 'confirm',
+      name: 'chatSDK',
+      message: 'Do you want to install Skygear Chat extension? (The core SDK already got Auth, CloudDB, Push and Pubsub)',
+      default: true
     }]).then((answers) => {
       this.appName = answers.appName;
       this.endPoint = answers.endPoint;
       this.apiKey = answers.apiKey;
+      this.chatSDK = answers.chatSDK;
       this.generatedWithVersion = parseInt(packageInfo.version.split('.').shift(), 10);
 
       this.config.set('generatedWithVersion', this.generatedWithVersion);
@@ -93,7 +99,11 @@ class SkygearGenerator extends Generators.Base {
           apiKey: this.apiKey
         }
       );
-      this.npmInstall(['skygear'], { save: true });
+      const skygearDeps = ['skygear']; 
+      if (this.chatSDK) {
+        skygearDeps.push('skygear-chat');
+      }
+      this.npmInstall(skygearDeps, { save: true });
       this._addSkygearExternal();
     });
   }
