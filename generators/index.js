@@ -99,7 +99,7 @@ class SkygearGenerator extends Generators.Base {
           apiKey: this.apiKey
         }
       );
-      const skygearDeps = ['skygear']; 
+      const skygearDeps = ['skygear'];
       if (this.chatSDK) {
         skygearDeps.push('skygear-chat');
       }
@@ -112,8 +112,8 @@ class SkygearGenerator extends Generators.Base {
     // Add th required webpack config for skygear
     // Those externals are handled within the skygear package
     // externals: {
-    //   'react-native': undefined,
-    //   'websocket': undefined
+    //   'react-native': 'undefined',
+    //   'websocket': 'undefined'
     // }
     //
     const cfgPath = this.destinationPath('cfg/base.js');
@@ -147,12 +147,12 @@ class SkygearGenerator extends Generators.Base {
                 type: 'Property',
                 kind: 'init',
                 key: { type: 'Identifier', name: '\'react-native\'' },
-                value: { type: 'Identifier', value: 'undefined' }
+                value: { type: 'Identifier', value: '\'undefined\'' }
               }, {
                 type: 'Property',
                 kind: 'init',
                 key: { type: 'Identifier', name: '\'websocket\'' },
-                value: { type: 'Identifier', name: 'undefined' }
+                value: { type: 'Identifier', name: '\'undefined\'' }
               }]
             }
           });
