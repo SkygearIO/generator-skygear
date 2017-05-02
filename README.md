@@ -1,4 +1,4 @@
-![Skygear Logo](https://skygear.io/static/images/skygear-logo.png)
+![Skygear Logo](img/skygear-logo.png)
 
 [Skygear](https://skygear.io) is a cloud backend for apps. It comes with SDKs for iOS, Android and Web.
 
@@ -45,7 +45,7 @@ npm run serve
 
 If you can see the following screen, it means you have set up the app successfully. :smile:
 
-![Skygear scaffolding](skygear-scaffold.png)
+![Skygear scaffolding](img/skygear-scaffold.png)
 
 ## Basic usage
 The following commands are available for your project:
