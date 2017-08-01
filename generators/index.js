@@ -99,7 +99,8 @@ class SkygearGenerator extends Generators.Base {
           apiKey: this.apiKey
         }
       );
-      const skygearDeps = ['skygear'];
+      // TODO: Remove the alpha tag after 1.1.0 release
+      const skygearDeps = ['skygear@alpha'];
       if (this.chatSDK) {
         skygearDeps.push('skygear-chat');
       }
