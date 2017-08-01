@@ -17,8 +17,8 @@
   ],
   "repository": "SkygearIO/generator-skygear",
   "dependencies": {
-    "yeoman-generator": "^0.23.4",
-    "generator-react-webpack": "3.3.2"
+    "generator-react-webpack": "^3.3.4",
+    "yeoman-generator": "^1.1.1"
   },
   "license": "Apache-2.0"
 }

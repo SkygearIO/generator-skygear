@@ -5,11 +5,11 @@ const esprima = require('esprima');
 const eWalk = require('esprima-walk');
 const escodegen = require('escodegen');
 
-const Generators = require('yeoman-generator');
+const Generator = require('yeoman-generator');
 const packageInfo = require('../package.json');
 
 
-class SkygearGenerator extends Generators.Base {
+class SkygearGenerator extends Generator {
 
   constructor(args, options) {
     super(args, options);
@@ -55,7 +55,7 @@ class SkygearGenerator extends Generators.Base {
 
     // Run the base react-webpack generator, then run the dispatcher
     this.composeWith(
-      'react-webpack',
+      require.resolve('generator-react-webpack'),
       {
         options: {
           'skip-install': this.options['skip-install']
