@@ -19,7 +19,7 @@ class AppComponent extends React.Component {
     let username = this.refs.username.value;
     let password = this.refs.password.value;
 
-    skygear.loginWithUsername(username, password).then(() => {
+    skygear.auth.loginWithUsername(username, password).then(() => {
       this.setState({
         'user': 'Logged in as '+username
       });
@@ -34,7 +34,7 @@ class AppComponent extends React.Component {
     let username = this.refs.username.value;
     let password = this.refs.password.value;
 
-    skygear.signupWithUsername(username, password).then(() => {
+    skygear.auth.signupWithUsername(username, password).then(() => {
       this.setState({
         'user': 'Signup as '+username
       });
@@ -46,7 +46,7 @@ class AppComponent extends React.Component {
   }
 
   doLogout() {
-    skygear.logout().then(() => {
+    skygear.auth.logout().then(() => {
       this.setState({
         'user': 'Logged out'
       });
