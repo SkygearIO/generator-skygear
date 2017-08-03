@@ -39,8 +39,7 @@ You will be asked to input the server endpoint and the api key of your app. You 
 ### Running the app
 
 ```bash
-npm start # or
-npm run serve
+npm start
 ```
 
 If you can see the following screen, it means you have set up the app successfully. :smile:
