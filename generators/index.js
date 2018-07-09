@@ -99,10 +99,9 @@ class SkygearGenerator extends Generator {
           apiKey: this.apiKey
         }
       );
-      // TODO: Remove the alpha tag after 1.1.0 release
-      const skygearDeps = ['skygear@alpha'];
+      const skygearDeps = ['skygear@^1.6.0'];
       if (this.chatSDK) {
-        skygearDeps.push('skygear-chat');
+        skygearDeps.push('skygear-chat@^1.3.4');
       }
       this.npmInstall(skygearDeps, { save: true });
       this._addSkygearExternal();
